@@ -7,8 +7,11 @@
   "scripts": {
     "build-client": "RENDER_MODE=BROWSER webpack --config webpack.config.js",
     "build-server": "RENDER_MODE=SERVER babel src --out-dir dist/ --source-maps inline",
-    "build-watch": "rm -rf ./dist &&  NODE_ENV=development RENDER_MODE=BROWSER yarn build-client -- --watch --devtool=inline-source-map & NODE_ENV=development RENDER_MODE=SERVER npm run build-server -- --delay 2.0 --watch",
-    "start-watch": "NODE_ENV=development DEBUG=express:* RENDER_MODE=SERVER nodemon --inspect index.js --watch dist"
+    "build-watch":
+      "rm -rf ./dist &&  NODE_ENV=development RENDER_MODE=BROWSER yarn build-client -- --watch --devtool=inline-source-map & NODE_ENV=development RENDER_MODE=SERVER npm run build-server -- --delay 2.0 --watch",
+    "start-watch":
+      "NODE_ENV=development DEBUG=express:* RENDER_MODE=SERVER nodemon --inspect index.js --watch dist",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -25,5 +28,17 @@
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "1.9.2"
+  },
+  "lint-staged": {
+    "*.{js,json,jsx}": ["prettier --write", "git add"]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "es5"
   }
 }
