@@ -1,7 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
 
-ReactDOM.render(
-    <div>it's alive!</div>,
-    document.getElementById('app')
+export default () => (
+  <div>
+    <div>it's alive!</div>
+    <div>
+      <button onClick={() => alert(1)}>click me</button>
+    </div>
+  </div>
 );
