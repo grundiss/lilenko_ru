@@ -5,7 +5,7 @@ const Html = ({ App, title = "lilenko.ru", bundleName }) => (
   <html>
     <head>
       <title>{title}</title>
-      <link type="stylesheet" href="/static/bundle.css" />
+      <link rel="stylesheet" href={`/static/css/${bundleName}.bundle.css`} />
     </head>
     <body>
       <div id="app" dangerouslySetInnerHTML={{ __html: ReactDOMServer.renderToString(<App />) }} />

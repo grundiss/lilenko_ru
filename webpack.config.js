@@ -46,7 +46,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [new ExtractTextPlugin({ filename: "[name].bundle.css", allChunks: true })],
+  plugins: [new ExtractTextPlugin({ filename: "../css/[name].bundle.css", allChunks: true })],
   resolve: {
     modules: [path.join(__dirname, "src"), "node_modules"],
     extensions: [".js", ".jsx"],
