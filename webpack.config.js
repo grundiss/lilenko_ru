@@ -14,10 +14,27 @@ module.exports = {
       {
         test: /\.js$/,
         loader: "babel-loader",
+        query: {
+          babelrc: false,
+          presets: ["env", "react"],
+        },
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
+        include: path.join(__dirname, "src"),
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: "css-loader",
+              options: {
+                modules: true,
+                localIdentName: "[local]_[hash:base64:5]",
+                imports: false,
+              },
+            },
+          ],
+          fallback: "style-loader",
+        }),
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -29,7 +46,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [new ExtractTextPlugin("bundle.css")],
+  plugins: [new ExtractTextPlugin({ filename: "[name].bundle.css", allChunks: true })],
   resolve: {
     modules: [path.join(__dirname, "src"), "node_modules"],
     extensions: [".js", ".jsx"],
