@@ -1,14 +1,6 @@
 import React from "react";
+import Page from "client/layout/page";
 
 import style from "./styles.css";
 
-export default () => (
-  <div className={style.test}>
-    <div>it's alive!</div>
-    <div>
-      <button onClick={() => alert(1)} className={style.test2}>
-        click me
-      </button>
-    </div>
-  </div>
-);
+export default () => <Page>Главная страница...</Page>;

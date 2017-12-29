@@ -12,11 +12,11 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loader: "babel-loader",
         query: {
           babelrc: false,
-          presets: ["env", "react"],
+          presets: ["react", "env"],
         },
       },
       {
@@ -29,7 +29,7 @@ module.exports = {
               options: {
                 modules: true,
                 localIdentName: "[local]_[hash:base64:5]",
-                imports: false,
+                imports: true,
               },
             },
           ],
