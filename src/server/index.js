@@ -12,7 +12,7 @@ export default root => {
   }
 
   app.get("/", (req, res) => {
-    res.send(html(Main, "main"));
+    html(Main, "main").pipe(res);
   });
 
   app.listen(3000, () => {
