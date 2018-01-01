@@ -1,5 +1,6 @@
 import React from "react";
 import Page from "client/layout/page";
+import { Icon } from "react-fa";
 
 import style from "./styles.css";
 
@@ -13,5 +14,6 @@ export default () => (
       </div>
     </div>
     Главная страница...
+    <Icon spin name="spinner" />
   </Page>
 );

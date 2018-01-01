@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: path.join(__dirname, "src"),
+        //include: path.join(__dirname, "src"),
         use: ExtractTextPlugin.extract({
           use: [
             {
@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "file-loader",
+        loader: "url-loader?limit=10000&mimetype=application/font-woff",
       },
     ],
   },
