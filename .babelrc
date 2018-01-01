@@ -1,7 +1,7 @@
 {
   "presets": ["env", "react"],
   "plugins": [
-    ["module-resolver", {"root": ["./src", "node_modules/font-awesome"]}],
+    ["module-resolver", {"root": ["./src"]}],
     ["css-modules-transform", {"generateScopedName": "[local]_[hash:base64:5]"}],
     ["inline-json-import", {}]
   ]
