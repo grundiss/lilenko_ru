@@ -9,6 +9,7 @@ export default root => {
 
   if (process.env.NODE_ENV === "development") {
     app.use("/static", express.static(path.join(root, "dist/static")));
+    app.use("/assets", express.static(path.join(root, "assets")));
   }
 
   app.get("/", (req, res) => {

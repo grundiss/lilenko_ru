@@ -9,7 +9,7 @@ export default ({ children }) => (
   <div>
     <nav className={navStyle.bar}>
       {menu.map((entry, i) => (
-        <a className={navStyle.link} href="#">
+        <a key={i} className={navStyle.link} href="#">
           {entry.title}
         </a>
       ))}
@@ -18,7 +18,7 @@ export default ({ children }) => (
     <footer className={fStyle.footer}>
       <nav className={fStyle.nav}>
         {menu.map((entry, i) => (
-          <a className={fStyle.navLink} href="#">
+          <a key={i} className={fStyle.navLink} href="#">
             {entry.title}
           </a>
         ))}

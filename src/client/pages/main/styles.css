@@ -1,1 +1,54 @@
 @import url('../common.css');
+
+@keyframes banner-img {
+  from {
+    opacity: 0;
+    margin-right: -50px;
+  }
+  to {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+
+@keyframes banner-text {
+  0% {
+    opacity: 0;
+    margin-top: 0;
+  }
+  50% {
+    opacity: 0;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 100px;
+  }
+}
+
+.banner {
+  height: 340px;
+  background: url(/assets/banner-bg.jpg) left bottom no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.bannerImg {
+  float: right;
+  animation: banner-img 1.5s linear 0s 1;
+}
+
+.bannerText {
+  margin-right: 250px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 100px;
+  animation: banner-text 1.9s linear 0s 1;
+}
+
+.bannerTextTop {
+  color: #aa11cc;
+  margin-bottom:20px;
+  font-size: 1.2em;
+}
