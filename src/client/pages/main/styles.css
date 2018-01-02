@@ -26,6 +26,18 @@
   }
 }
 
+@keyframes icon-jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .banner {
   height: 450px;
   background: url(/assets/banner-bg.jpg) left bottom no-repeat;
@@ -52,4 +64,76 @@
   margin-bottom:20px;
   font-size: 1.2em;
   letter-spacing: 10px;
+}
+
+.whatToDo {
+  margin: 40px 0 60px;
+}
+
+.whatToDoTitle {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.whatToList {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.whatToItem {
+  padding: 0 10px 0 20px;
+  text-align: center;
+}
+
+.whatToItemIcon {
+  color: #ff4629;
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.whatToItem:hover .whatToItemIcon {
+  animation: icon-jump 0.4s linear 0s 1;
+}
+
+.feedBack {
+  margin: 40px 0 60px;
+}
+
+.feedBackTitle {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.feedBackList {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.feedBackColumn {
+  width: 560px;
+}
+
+.feedBackItem {}
+
+.feedBackItemTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feedBackItemMedia {
+  margin-bottom: 10px;
+}
+
+.feedBackItemText {}
+
+.feedBackMore {
+  margin-top: 10px;
+  text-align: right;
 }

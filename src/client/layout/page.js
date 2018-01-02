@@ -25,9 +25,9 @@ export default ({ children }) => (
         ))}
       </nav>
       <div>
-        (с) Все права защищены. <a href="http://lilenko.ru/">Lilenko.ru</a>{" "}
+        (с) Все права защищены. <a href="http://lilenko.ru/">Lilenko.ru</a> <br />
         <a href="https://www.facebook.com/irina.lilenko/" target="_blank">
-          <Icon name="facebook-official" />
+          Давайте дружить в <Icon name="facebook-official" />
         </a>
       </div>
     </footer>
