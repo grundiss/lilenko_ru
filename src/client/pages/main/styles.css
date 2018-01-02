@@ -22,12 +22,12 @@
   }
   100% {
     opacity: 1;
-    margin-top: 100px;
+    margin-top: 180px;
   }
 }
 
 .banner {
-  height: 340px;
+  height: 450px;
   background: url(/assets/banner-bg.jpg) left bottom no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -43,7 +43,7 @@
   text-align: center;
   font-size: 30px;
   font-weight: bold;
-  margin-top: 100px;
+  margin-top: 180px;
   animation: banner-text 1.9s linear 0s 1;
 }
 
