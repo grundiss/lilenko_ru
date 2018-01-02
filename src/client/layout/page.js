@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "client/components/icon";
 
 import menu from "./menu.json";
 
@@ -24,7 +25,10 @@ export default ({ children }) => (
         ))}
       </nav>
       <div>
-        (с) Все права защищены. <a href="http://lilenko.ru/">Lilenko.ru</a>
+        (с) Все права защищены. <a href="http://lilenko.ru/">Lilenko.ru</a>{" "}
+        <a href="https://www.facebook.com/irina.lilenko/" target="_blank">
+          <Icon name="facebook-official" />
+        </a>
       </div>
     </footer>
   </div>
