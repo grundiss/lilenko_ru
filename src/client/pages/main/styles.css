@@ -70,12 +70,6 @@
   margin: 40px 0 60px;
 }
 
-.whatToDoTitle {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
 .whatToList {
   display: flex;
   align-items: flex-start;
@@ -101,12 +95,6 @@
 
 .feedBack {
   margin: 40px 0 60px;
-}
-
-.feedBackTitle {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 10px;
 }
 
 .feedBackList {
@@ -136,4 +124,14 @@
 .feedBackMore {
   margin-top: 10px;
   text-align: right;
+}
+
+.promo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.promoColumn {
+  width: 560px;
 }

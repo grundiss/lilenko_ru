@@ -17,7 +17,7 @@ export default () => (
     </div>
 
     <div className={cx(style.whatToDo, elementsStyle.section)}>
-      <div className={style.whatToDoTitle}>Что можно сделать с помощью краудфандинга</div>
+      <div className={elementsStyle.sectionHeader}>Что можно сделать с помощью краудфандинга</div>
       <div className={style.whatToList}>
         <div className={style.whatToItem}>
           <Icon name="paw" className={style.whatToItemIcon} />
@@ -45,7 +45,7 @@ export default () => (
     </div>
 
     <div className={cx(style.feedBack, elementsStyle.section)}>
-      <div className={style.feedBackTitle}>Что говорят обо мне авторы проектов</div>
+      <div className={elementsStyle.sectionHeader}>Что говорят обо мне авторы проектов</div>
       <div className={style.feedBackList}>
         <div className={style.feedBackColumn}>
           <div className={style.feedBackItem}>
@@ -62,7 +62,7 @@ export default () => (
                 frameborder="0"
                 gesture="media"
                 allow="encrypted-media"
-                allowfullscreen
+                allowFullScreen
               />
             </div>
           </div>
@@ -80,7 +80,7 @@ export default () => (
                 frameborder="0"
                 gesture="media"
                 allow="encrypted-media"
-                allowfullscreen
+                allowFullScreen
               />
             </div>
           </div>
@@ -118,6 +118,47 @@ export default () => (
       </div>
       <div className={style.feedBackMore}>
         <a href="/feedback/">Смотреть все отзывы</a>
+      </div>
+    </div>
+
+    <div className={cx(style.promo, elementsStyle.section)}>
+      <div className={style.promoColumn}>
+        <div className={elementsStyle.sectionHeader}>Консалтинг</div>
+        <p>
+          Сингулярность эксперментально верифицируема. Гидродинамический удар вращает электрон.
+          Течение среды мономолекулярно индуцирует гамма-квант. Еще в ранних работах Л.Д.Ландау
+          показано, что квантовое состояние нейтрализует наносекундный экситон. Квант облучает
+          лептон.
+        </p>
+        <p>
+          Струя, на первый взгляд, мономолекулярно заряжает расширяющийся осциллятор. Многочисленные
+          расчеты предсказывают, а эксперименты подтверждают, что среда зеркально сжимает
+          нестационарный поток вне зависимости от предсказаний самосогласованной теоретической
+          модели явления. Возмущение плотности недетерминировано вращает субсветовой объект.
+          Гамма-квант, по данным астрономических наблюдений, трансформирует лептон. Расслоение,
+          вследствие квантового характера явления, мгновенно ускоряет поток, и этот процесс может
+          повторяться многократно. Сингулярность представляет собой фронт как при нагреве, так и при
+          охлаждении.
+        </p>
+        <p>
+          <a href="/consulting/">Подробнее о консалтинге</a>
+        </p>
+      </div>
+      <div className={style.promoColumn}>
+        <div className={elementsStyle.sectionHeader}>Книга</div>
+        <p>
+          Глей, как того требуют законы термодинамики, слабопроницаем. Спектральная отражательная
+          способность вымывает в режим как при нагреве, так и при охлаждении. Напряжение двумерно
+          ускоряет педон. Рендзина отталкивает влагомер. Несмотря на кажущуюся простоту
+          эксперимента, влагомер нагревает бур. Переувлажнение, как бы это ни казалось
+          парадоксальным, повышает биокосный дренаж.
+        </p>
+        <p>
+          <img src="/assets/book.jpeg" />
+        </p>
+        <p>
+          <a href="/book/">Подробнее о книге</a>
+        </p>
       </div>
     </div>
   </Page>

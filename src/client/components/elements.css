@@ -1,3 +1,24 @@
 .section {
-  margin: 0 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.sectionHeader {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.sectionHeader::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100px;
+  left:50%;
+  margin-left: -50px;
+  height: 4px;
+  background: #ff4629;
+  bottom: 0;
 }

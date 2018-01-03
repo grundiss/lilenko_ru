@@ -24,11 +24,17 @@ export default ({ children }) => (
           </a>
         ))}
       </nav>
-      <div>
-        (с) Все права защищены. <a href="http://lilenko.ru/">Lilenko.ru</a> <br />
-        <a href="https://www.facebook.com/irina.lilenko/" target="_blank">
-          Давайте дружить в <Icon name="facebook-official" />
-        </a>
+      <div className={fStyle.left}>
+        <div>
+          (с) Все права защищены. <a href="http://lilenko.ru/">Lilenko.ru</a>
+        </div>
+        <div className={fStyle.contacts}>
+          <a href="https://www.facebook.com/irina.lilenko/" target="_blank">
+            Давайте дружить в <Icon name="facebook-official" />
+          </a>
+          <br />
+          <a href="mailto:info@lilenko.ru">info@lilenko.ru</a>
+        </div>
       </div>
     </footer>
   </div>
