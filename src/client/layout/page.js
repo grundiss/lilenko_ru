@@ -14,7 +14,7 @@ export default ({ children }) => (
         <Icon name="home" />
       </a>
       {menu.map((entry, i) => (
-        <a key={i} className={navStyle.link} href="#">
+        <a key={i} className={navStyle.link} href={entry.link || "#"}>
           {entry.title}
         </a>
       ))}

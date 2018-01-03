@@ -4,6 +4,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: {
     main: "./src/client/pages/main/browser.js",
+    book: "./src/client/pages/book/browser.js",
   },
   output: {
     path: path.join(__dirname, "./dist/static/js"),
