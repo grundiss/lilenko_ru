@@ -15,3 +15,8 @@
   display: inline-block;
   margin-right: 10px;
 }
+
+.linkHome {
+  margin-right: 15px;
+  text-decoration: none;
+}

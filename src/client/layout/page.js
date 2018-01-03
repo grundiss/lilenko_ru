@@ -1,5 +1,6 @@
 import React from "react";
 import Icon from "client/components/icon";
+import cx from "classnames";
 
 import menu from "./menu.json";
 
@@ -9,6 +10,9 @@ import fStyle from "./footer.css";
 export default ({ children }) => (
   <div>
     <nav className={navStyle.bar}>
+      <a href="/" className={cx(navStyle.link, navStyle.linkHome)}>
+        <Icon name="home" />
+      </a>
       {menu.map((entry, i) => (
         <a key={i} className={navStyle.link} href="#">
           {entry.title}
