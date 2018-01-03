@@ -1,10 +1,11 @@
 import React from "react";
 import Page from "client/layout/page";
 import Icon from "client/components/icon";
+import Section from "client/components/section";
 import cx from "classnames";
 
 import style from "./styles.css";
-import elementsStyle from "client/components/elements.css";
+import sectionStyle from "client/components/section.css";
 
 const bannerTexts = [
   "Весь путь от мечты до продукта",
@@ -70,8 +71,7 @@ export default () => (
   <Page>
     <Banner />
 
-    <div className={cx(style.whatToDo, elementsStyle.section)}>
-      <div className={elementsStyle.sectionHeader}>Что можно сделать с помощью краудфандинга</div>
+    <Section className={style.whatToDo} title="Что можно сделать с помощью краудфандинга">
       <div className={style.whatToList}>
         {Object.entries(whatToDo).map(([icon, caption], i) => (
           <div className={style.whatToItem} key={i}>
@@ -80,10 +80,9 @@ export default () => (
           </div>
         ))}
       </div>
-    </div>
+    </Section>
 
-    <div className={elementsStyle.section}>
-      <div className={elementsStyle.sectionHeader}>Как работает краудфандинг</div>
+    <Section title="Как работает краудфандинг">
       <p>
         Если точно перевести с английского слово crowdfunding, то получим «финансирование толпой».
         Слово «толпа» мы воспринимаем как нечто негативное, поэтому в самый близкий по смыслу
@@ -94,10 +93,9 @@ export default () => (
         Что есть краудфандинг по сути?{" "}
         <a href="/articles/#how-crowdfunding-works">Перейти к статье</a>
       </p>
-    </div>
+    </Section>
 
-    <div className={cx(style.feedBack, elementsStyle.section)}>
-      <div className={elementsStyle.sectionHeader}>Что говорят обо мне авторы проектов</div>
+    <Section className={style.feedBack} title="Что говорят обо мне авторы проектов">
       <div className={style.feedBackList}>
         <div className={style.feedBackColumn}>
           <div className={style.feedBackItem}>
@@ -171,11 +169,11 @@ export default () => (
       <div className={style.feedBackMore}>
         <a href="/feedback/">Смотреть все отзывы</a>
       </div>
-    </div>
+    </Section>
 
-    <div className={cx(style.promo, elementsStyle.section)}>
+    <div className={cx(style.promo, sectionStyle.section)}>
       <div className={style.promoColumn}>
-        <div className={elementsStyle.sectionHeader}>Консалтинг</div>
+        <div className={sectionStyle.sectionHeader}>Консалтинг</div>
         <p>
           Сингулярность эксперментально верифицируема. Гидродинамический удар вращает электрон.
           Течение среды мономолекулярно индуцирует гамма-квант. Еще в ранних работах Л.Д.Ландау
@@ -197,7 +195,7 @@ export default () => (
         </p>
       </div>
       <div className={style.promoColumn}>
-        <div className={elementsStyle.sectionHeader}>Книга</div>
+        <div className={sectionStyle.sectionHeader}>Книга</div>
         <p>
           Глей, как того требуют законы термодинамики, слабопроницаем. Спектральная отражательная
           способность вымывает в режим как при нагреве, так и при охлаждении. Напряжение двумерно

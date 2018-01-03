@@ -1,14 +1,13 @@
 import React from "react";
 import Page from "client/layout/page";
+import Section from "client/components/section";
 
 import style from "./styles.css";
-import elementsStyle from "client/components/elements.css";
 
 export default () => (
   <Page>
-    <div className={elementsStyle.section}>
-      <div className={elementsStyle.sectionHeader}>Конференция</div>
+    <Section title="Конференция">
       <p>Каждый год я провожу конференцию.</p>
-    </div>
+    </Section>
   </Page>
 );

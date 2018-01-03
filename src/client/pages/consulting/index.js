@@ -1,13 +1,12 @@
 import React from "react";
 import Page from "client/layout/page";
+import Section from "client/components/section";
 
 import style from "./styles.css";
-import elementsStyle from "client/components/elements.css";
 
 export default () => (
   <Page>
-    <div className={elementsStyle.section}>
-      <div className={elementsStyle.sectionHeader}>Консалтинг</div>
+    <Section title="Консалтинг">
       <p>
         Вопреки распространенным утверждениям, информационно-технологическая революция означает
         коммунизм. Субъект власти интегрирует онтологический коммунизм. Надо сказать, что понятие
@@ -26,6 +25,6 @@ export default () => (
         интегрирует англо-американский тип политической культуры, указывает в своем исследовании
         К.Поппер.
       </p>
-    </div>
+    </Section>
   </Page>
 );

@@ -7,26 +7,25 @@ import menu from "./menu.json";
 import navStyle from "./nav.css";
 import fStyle from "./footer.css";
 
+const Menu = ({ className }) =>
+  menu.map((entry, i) => (
+    <a key={i} className={className} href={entry.link || "#"}>
+      {entry.title}
+    </a>
+  ));
+
 export default ({ children }) => (
   <div>
     <nav className={navStyle.bar}>
       <a href="/" className={cx(navStyle.link, navStyle.linkHome)}>
         <Icon name="home" />
       </a>
-      {menu.map((entry, i) => (
-        <a key={i} className={navStyle.link} href={entry.link || "#"}>
-          {entry.title}
-        </a>
-      ))}
+      <Menu className={navStyle.link} />
     </nav>
     <div>{children}</div>
     <footer className={fStyle.footer}>
       <nav className={fStyle.nav}>
-        {menu.map((entry, i) => (
-          <a key={i} className={fStyle.navLink} href="#">
-            {entry.title}
-          </a>
-        ))}
+        <Menu className={fStyle.navLink} />
       </nav>
       <div className={fStyle.left}>
         <div>

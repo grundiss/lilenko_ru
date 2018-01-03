@@ -1,19 +1,13 @@
 import React from "react";
 import Page from "client/layout/page";
 import Icon from "client/components/icon";
+import Section from "client/components/section";
 
 import style from "./styles.css";
-import elementsStyle from "client/components/elements.css";
 
 export default () => (
   <Page>
-    <div className={elementsStyle.section}>
-      <div className={elementsStyle.sectionHeader} id="how-crowdfunding-works">
-        Как работает краудфандинг{" "}
-        <a href="#how-crowdfunding-works">
-          <Icon name="paragraph" />
-        </a>
-      </div>
+    <Section title="Как работает краудфандинг" id="how-crowdfunding-works">
       <p>
         Если точно перевести с английского слово crowdfunding, то получим «финансирование толпой».
         Слово «толпа» мы воспринимаем как нечто негативное, поэтому в самый близкий по смыслу
@@ -71,15 +65,9 @@ export default () => (
       <p>
         Более подробно об этом и многом другом <a href="/book/">в книге</a>
       </p>
-    </div>
+    </Section>
 
-    <div className={elementsStyle.section}>
-      <div className={elementsStyle.sectionHeader} id="why-no-success">
-        Почему не все проекты успешны{" "}
-        <a href="#why-no-success">
-          <Icon name="paragraph" />
-        </a>
-      </div>
+    <Section title="Почему не все проекты успешны" id="why-no-success">
       <p>
         Краудфандинг не так прост, как кажется. Это метод, технология, со своими правилами. Это
         совсем не сложные правила, но, тем не менее, знать их надо. Никому не придет в голову
@@ -129,15 +117,9 @@ export default () => (
         каждом деле своя загогулина. Зря мы, господа, забываем мудрые книжки и мультики нашего
         детства. А ведь нам говорили: «Если не знаешь, как, надо у кого-нибудь спросить».
       </p>
-    </div>
+    </Section>
 
-    <div className={elementsStyle.section}>
-      <div className={elementsStyle.sectionHeader} id="go-away">
-        Кому краудфандинг противопоказан{" "}
-        <a href="#go-away">
-          <Icon name="paragraph" />
-        </a>
-      </div>
+    <Section title="Кому краудфандинг противопоказан" id="go-away">
       <p>Только не всем краудфандинг одинаково полезен. Кому-то он противопоказан.</p>
       <p>
         Мы все разные. Одному нельзя виноград, другому нельзя в солярий – так проявляются
@@ -180,15 +162,9 @@ export default () => (
         например, есть шоколад. И вы живите без попыток прийти в краудфандинг, и не морочьте себе
         голову тем, что не вписывается в ваши моральные принципы.
       </p>
-    </div>
+    </Section>
 
-    <div className={elementsStyle.section}>
-      <div className={elementsStyle.sectionHeader} id="3-mistakes">
-        3 главных заблуждения авторов краудфандинговых проектов{" "}
-        <a href="#3-mistakes">
-          <Icon name="paragraph" />
-        </a>
-      </div>
+    <Section title="3 главных заблуждения авторов краудфандинговых проектов" id="3-mistakes">
       <p>
         <b>Первое заблуждение</b>
       </p>
@@ -230,6 +206,6 @@ export default () => (
         прозрачно, ничего сомнительного, что деньги действительно нужны для дела, то поддерживают
         такие проекты с большим энтузиазмом.
       </p>
-    </div>
+    </Section>
   </Page>
 );
