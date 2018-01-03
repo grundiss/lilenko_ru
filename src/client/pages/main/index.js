@@ -6,15 +6,59 @@ import cx from "classnames";
 import style from "./styles.css";
 import elementsStyle from "client/components/elements.css";
 
+const bannerTexts = [
+  "Весь путь от мечты до продукта",
+  "Шаг за шагом от подготовки до результата",
+  "Подробности превращения идеи в личный бренд",
+];
+
+class Banner extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { item: 0 };
+    this.interval = -1;
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      let item = this.state.item + 1;
+
+      if (item >= bannerTexts.length) {
+        item = 0;
+      }
+
+      this.setState({ item });
+    }, 4000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    const { item } = this.state;
+    const bannerTextBottonItem = bannerTexts[item];
+
+    return (
+      <div className={style.banner}>
+        <img src="/assets/lilenko-main.png" className={style.bannerImg} />
+        <div className={style.bannerText}>
+          <div className={style.bannerTextTop}>Практика краудфандинга</div>
+          <div className={style.bannerTextBottom}>
+            <div className={style.bannerTextBottomItem} key={item}>
+              {bannerTextBottonItem}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
 export default () => (
   <Page>
-    <div className={style.banner}>
-      <img src="/assets/lilenko-main.png" className={style.bannerImg} />
-      <div className={style.bannerText}>
-        <div className={style.bannerTextTop}>Практика краудфандинга</div>
-        <div>изнутри и снаружи</div>
-      </div>
-    </div>
+    <Banner />
 
     <div className={cx(style.whatToDo, elementsStyle.section)}>
       <div className={elementsStyle.sectionHeader}>Что можно сделать с помощью краудфандинга</div>

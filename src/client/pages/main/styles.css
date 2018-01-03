@@ -26,6 +26,21 @@
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes icon-jump {
   0% {
     transform: translateY(0);
@@ -53,17 +68,24 @@
 .bannerText {
   margin-right: 250px;
   text-align: center;
-  font-size: 30px;
   font-weight: bold;
   margin-top: 180px;
-  animation: banner-text 1.9s linear 0s 1;
+  animation: banner-text 2s linear 0s 1;
 }
 
 .bannerTextTop {
   color: #aa11cc;
   margin-bottom:20px;
-  font-size: 1.2em;
+  font-size: 40px;
   letter-spacing: 10px;
+}
+
+.bannerTextBottom {}
+
+.bannerTextBottomItem {
+  font-size: 24px;
+  opacity: 0;
+  animation: fade-in 2.5s linear 0.5s 1;
 }
 
 .whatToDo {
