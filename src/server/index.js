@@ -2,7 +2,7 @@ import path from "path";
 import express from "express";
 import React from "react";
 import html from "./html";
-import { Main, Book } from "client/pages";
+import { Main, Book, Conference } from "client/pages";
 
 export default root => {
   const app = express();
@@ -18,6 +18,10 @@ export default root => {
 
   app.get("/book", (req, res) => {
     html(Book, "main").pipe(res);
+  });
+
+  app.get("/conference", (req, res) => {
+    html(Conference, "main").pipe(res);
   });
 
   app.listen(3000, () => {

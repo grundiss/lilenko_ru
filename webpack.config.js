@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     main: "./src/client/pages/main/browser.js",
     book: "./src/client/pages/book/browser.js",
+    conference: "./src/client/pages/conference/browser.js",
   },
   output: {
     path: path.join(__dirname, "./dist/static/js"),
