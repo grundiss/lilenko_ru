@@ -6,6 +6,10 @@ module.exports = {
     main: "./src/client/pages/main/browser.js",
     book: "./src/client/pages/book/browser.js",
     conference: "./src/client/pages/conference/browser.js",
+    school: "./src/client/pages/school/browser.js",
+    consulting: "./src/client/pages/consulting/browser.js",
+    articles: "./src/client/pages/articles/browser.js",
+    about: "./src/client/pages/about/browser.js",
   },
   output: {
     path: path.join(__dirname, "./dist/static/js"),

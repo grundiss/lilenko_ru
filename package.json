@@ -5,7 +5,7 @@
   "author": "grundiss <grundiss@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build-client": "RENDER_MODE=BROWSER webpack --config webpack.config.js --display-chunks",
+    "build-client": "RENDER_MODE=BROWSER webpack --config webpack.config.js",
     "build-server": "RENDER_MODE=SERVER babel src --out-dir dist/ --source-maps inline",
     "build-watch":
       "rm -rf ./dist && NODE_ENV=development RENDER_MODE=BROWSER yarn build-client --watch --devtool=inline-source-map & NODE_ENV=development RENDER_MODE=SERVER yarn build-server --delay 2.0 --watch",
