@@ -56,6 +56,16 @@ class Banner extends React.Component {
   }
 }
 
+const whatToDo = {
+  book: "Издать книгу",
+  "camera-retro": "Снять фильм",
+  bank: "Поставить спектакль",
+  calendar: "Провести мероприятие",
+  child: "Начать свое дело",
+  "handshake-o": "Помочь нуждающимся",
+  "shopping-cart": "Произвести новый продукт",
+};
+
 export default () => (
   <Page>
     <Banner />
@@ -63,28 +73,12 @@ export default () => (
     <div className={cx(style.whatToDo, elementsStyle.section)}>
       <div className={elementsStyle.sectionHeader}>Что можно сделать с помощью краудфандинга</div>
       <div className={style.whatToList}>
-        <div className={style.whatToItem}>
-          <Icon name="paw" className={style.whatToItemIcon} />
-          Издать книгу
-        </div>
-        <div className={style.whatToItem}>
-          <Icon name="paw" className={style.whatToItemIcon} />Снять фильм
-        </div>
-        <div className={style.whatToItem}>
-          <Icon name="paw" className={style.whatToItemIcon} />Поставить спектакль
-        </div>
-        <div className={style.whatToItem}>
-          <Icon name="paw" className={style.whatToItemIcon} />Провести мероприятие
-        </div>
-        <div className={style.whatToItem}>
-          <Icon name="paw" className={style.whatToItemIcon} />Начать свое дело
-        </div>
-        <div className={style.whatToItem}>
-          <Icon name="paw" className={style.whatToItemIcon} />Помочь нуждающимся
-        </div>
-        <div className={style.whatToItem}>
-          <Icon name="paw" className={style.whatToItemIcon} />Произвести новый продукт
-        </div>
+        {Object.entries(whatToDo).map(([icon, caption], i) => (
+          <div className={style.whatToItem} key={i}>
+            <Icon name={icon} size="2x" className={style.whatToItemIcon} />
+            {caption}
+          </div>
+        ))}
       </div>
     </div>
 
