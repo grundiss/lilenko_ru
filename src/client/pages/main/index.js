@@ -82,6 +82,20 @@ export default () => (
       </div>
     </div>
 
+    <div className={elementsStyle.section}>
+      <div className={elementsStyle.sectionHeader}>Как работает краудфандинг</div>
+      <p>
+        Если точно перевести с английского слово crowdfunding, то получим «финансирование толпой».
+        Слово «толпа» мы воспринимаем как нечто негативное, поэтому в самый близкий по смыслу
+        перевод слова crowdfunding будет «в складчину». С этим мы хорошо знакомы, и задача скинуться
+        на благое дело вопросов, вроде бы, не вызывает.
+      </p>
+      <p>
+        Что есть краудфандинг по сути?{" "}
+        <a href="/articles/#how-crowdfunding-works">Перейти к статье</a>
+      </p>
+    </div>
+
     <div className={cx(style.feedBack, elementsStyle.section)}>
       <div className={elementsStyle.sectionHeader}>Что говорят обо мне авторы проектов</div>
       <div className={style.feedBackList}>
