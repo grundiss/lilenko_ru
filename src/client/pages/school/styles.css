@@ -1,1 +1,37 @@
 @import url('../common.css');
+
+.intro {
+  text-align: center;
+}
+
+.optionsTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.optionHeader {
+  font-size: 24px;
+  font-weight: bold;
+  min-width: 33%;
+  text-align: center;
+}
+
+.optionShortDescription {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+}
+
+.optionLongDescription {}
+
+.optionSubscribe {
+  background-color: #fff1a4;
+  color: #000;
+  font-size: 13px;
+  border-right: 30px solid #fff;
+  padding: 5px 10px;
+}
+
+.optionSubscribe:last-child {
+  border: 0;
+}
