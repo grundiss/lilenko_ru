@@ -35,3 +35,11 @@
 .optionSubscribe:last-child {
   border: 0;
 }
+
+.subscriptionError {
+  color: #ff0000;
+}
+
+.subscriptionSuccess {
+  color: #559900;
+}

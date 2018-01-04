@@ -11,7 +11,7 @@ const Html = ({ App, title = "lilenko.ru", bundleName }) => (
     </head>
     <body>
       <div id="app" dangerouslySetInnerHTML={{ __html: ReactDOMServer.renderToString(<App />) }} />
-      <script src={`static/js/${bundleName}.bundle.js`} />
+      <script src={`/static/js/${bundleName}.bundle.js`} />
     </body>
   </html>
 );
