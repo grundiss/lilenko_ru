@@ -1,6 +1,7 @@
 import React from "react";
 import Page from "client/layout/page";
 import Section from "client/components/section";
+import Icon from "client/components/icon";
 import axios from "axios";
 
 import style from "./styles.css";
@@ -39,7 +40,9 @@ class Subscribe extends React.Component {
     return (
       <React.Fragment>
         {this.state.state === "success" ? (
-          <div className={style.subscriptionSuccess}>Спасибо за подписку!</div>
+          <div className={style.subscriptionSuccess}>
+            <Icon name="check" /> Спасибо за подписку!
+          </div>
         ) : (
           <React.Fragment>
             Оставьте свой email<br />и мы оповестим вас о старте курса

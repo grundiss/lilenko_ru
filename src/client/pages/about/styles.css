@@ -1,1 +1,18 @@
 @import url('../common.css');
+
+.twoCols {
+  overflow: hidden;
+}
+
+.twoColsRight {
+  float: right;
+  width: 500px;
+}
+
+.twoColsLeft {
+  margin-right: 520px;
+}
+
+.media {
+  margin-bottom: 15px;
+}
