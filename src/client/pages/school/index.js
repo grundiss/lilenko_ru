@@ -1,75 +1,21 @@
 import React from "react";
 import Page from "client/layout/page";
 import Section from "client/components/section";
-import Icon from "client/components/icon";
-import axios from "axios";
+import SubscribeOriginal from "client/components/subscribe";
 
 import style from "./styles.css";
 
-class Subscribe extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      value: "",
-      state: "form", // 'sending', success', 'error'
-    };
-
-    this.send = this.send.bind(this);
-    this.setValue = this.setValue.bind(this);
-  }
-
-  send() {
-    const email = this.state.value;
-
-    if (email) {
-      this.setState({ state: "sending" });
-      axios
-        .post("/json/subsribe-to-school-updates/", {
-          email,
-          courseType: this.props.id,
-        })
-        .then(() => this.setState({ state: "success" }))
-        .catch(() => this.setState({ state: "error" }));
-    } else {
-      this.setState({ state: "error" });
-    }
-  }
-
-  setValue({ target: { value } }) {
-    this.setState({ value, state: "form" });
-  }
-
-  render() {
-    const id = this.props.id;
-
-    return (
+const Subscribe = props => (
+  <SubscribeOriginal
+    invitationText={
       <React.Fragment>
-        {this.state.state === "success" ? (
-          <div className={style.subscriptionSuccess}>
-            <Icon name="check" /> Спасибо за подписку!
-          </div>
-        ) : (
-          <React.Fragment>
-            Оставьте свой email<br />и мы оповестим вас о старте курса
-            <br />
-            <nobr>
-              <input type="text" value={this.state.value} onChange={this.setValue} />
-              <button onClick={this.send} disabled={this.state.state === "sending"}>
-                Подписаться
-              </button>
-            </nobr>
-          </React.Fragment>
-        )}
-        {this.state.state === "error" && (
-          <div className={style.subscriptionError}>
-            Произошла ошибка. Пожалуйста, попробуйте позже.
-          </div>
-        )}
+        Оставьте свой email<br />и мы оповестим вас о старте курса
       </React.Fragment>
-    );
-  }
-}
+    }
+    apiUrl="/json/subsribe-to-updates/"
+    {...props}
+  />
+);
 
 export default () => (
   <Page>

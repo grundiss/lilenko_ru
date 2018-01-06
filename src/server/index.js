@@ -5,7 +5,7 @@ import bodyParser from "body-parser";
 import React from "react";
 import html from "./html";
 import { Main, Book, Conference, School, Consulting, Articles, About } from "client/pages";
-import { subsribeToSchoolUpdates } from "./db";
+import { subsribeToUpdates } from "./db";
 
 export default root => {
   AWS.config.loadFromPath(path.join(root, "aws.credentials.json"));
@@ -47,7 +47,7 @@ export default root => {
     html(About, "about").pipe(res);
   });
 
-  app.post("/json/subsribe-to-school-updates", (req, res) => {
+  app.post("/json/subsribe-to-updates", (req, res) => {
     const ok = () => res.json({ ok: true });
     const notOk = () => res.status(500).json({ ok: false });
 
@@ -55,7 +55,7 @@ export default root => {
 
     if (!email) return notOk();
 
-    subsribeToSchoolUpdates(ddb, { email, courseType })
+    subsribeToUpdates(ddb, { email, courseType })
       .then(ok)
       .catch(notOk);
   });

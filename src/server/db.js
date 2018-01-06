@@ -1,4 +1,4 @@
-export const subsribeToSchoolUpdates = (ddbServiceInstance, { email, courseType }) =>
+export const subsribeToUpdates = (ddbServiceInstance, { email, courseType }) =>
   new Promise((resolve, reject) => {
     ddbServiceInstance.putItem(
       {

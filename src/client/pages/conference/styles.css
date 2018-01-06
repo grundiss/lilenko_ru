@@ -1,1 +1,8 @@
 @import url('../common.css');
+
+.email {
+  display: inline-block;
+  vertical-align: top;
+  padding: 2px 5px;
+  background-color: #fff1a4;
+}

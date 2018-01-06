@@ -32,7 +32,7 @@ export default ({ children }) => (
           (с) Все права защищены. <a href="http://lilenko.ru/">Lilenko.ru</a>
         </div>
         <div className={fStyle.contacts}>
-          <a href="https://www.facebook.com/irina.lilenko/" target="_blank">
+          <a href="https://www.facebook.com/crowdall/" target="_blank">
             Давайте дружить в <Icon name="facebook-official" />
           </a>
           <br />
