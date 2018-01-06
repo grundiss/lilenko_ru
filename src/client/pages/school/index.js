@@ -20,18 +20,24 @@ class Subscribe extends React.Component {
   }
 
   send() {
-    this.setState({ state: "sending" });
-    axios
-      .post("/json/subsribe-to-school-updates/", {
-        email: this.state.value,
-        courseType: this.props.id,
-      })
-      .then(() => this.setState({ state: "success" }))
-      .catch(() => this.setState({ state: "error" }));
+    const email = this.state.value;
+
+    if (email) {
+      this.setState({ state: "sending" });
+      axios
+        .post("/json/subsribe-to-school-updates/", {
+          email,
+          courseType: this.props.id,
+        })
+        .then(() => this.setState({ state: "success" }))
+        .catch(() => this.setState({ state: "error" }));
+    } else {
+      this.setState({ state: "error" });
+    }
   }
 
   setValue({ target: { value } }) {
-    this.setState({ value });
+    this.setState({ value, state: "form" });
   }
 
   render() {

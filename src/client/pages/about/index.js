@@ -9,7 +9,7 @@ export default () => (
     <Section title="Обо мне">
       <div className={style.twoCols}>
         <div className={style.twoColsRight}>
-          <div classnName={style.media}>
+          <div className={style.media}>
             <iframe
               width="500"
               height="281"
@@ -20,7 +20,7 @@ export default () => (
               allowFullScreen
             />
           </div>
-          <div classnName={style.media}>
+          <div className={style.media}>
             <iframe
               width="500"
               height="281"
@@ -31,7 +31,7 @@ export default () => (
               allowFullScreen
             />
           </div>
-          <div classnName={style.media}>
+          <div className={style.media}>
             <iframe
               width="500"
               height="281"

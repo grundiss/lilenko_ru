@@ -28,7 +28,7 @@ export default root => {
   });
 
   app.get("/conference", (req, res) => {
-    html(Conference, "book").pipe(res);
+    html(Conference, "conference").pipe(res);
   });
 
   app.get("/school", (req, res) => {
