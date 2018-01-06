@@ -68,7 +68,7 @@
 .bannerText {
   margin-right: 250px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   margin-top: 180px;
   animation: banner-text 2s linear 0s 1;
 }
@@ -133,7 +133,7 @@
 
 .feedBackItemTitle {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 

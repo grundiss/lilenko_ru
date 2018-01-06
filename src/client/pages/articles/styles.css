@@ -1,1 +1,13 @@
 @import url('../common.css');
+
+.q {
+  font-family: 'Forum', serif;
+  border: 1px solid #000;
+  border-width: 1px 0;
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
