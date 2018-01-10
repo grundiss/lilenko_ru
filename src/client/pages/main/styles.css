@@ -129,7 +129,9 @@
   width: 560px;
 }
 
-.feedBackItem {}
+.feedBackItem {
+  margin-bottom: 15px;
+}
 
 .feedBackItemTitle {
   font-size: 16px;
@@ -138,15 +140,11 @@
 }
 
 .feedBackItemMedia {
+  text-align: center;
   margin-bottom: 10px;
 }
 
 .feedBackItemText {}
-
-.feedBackMore {
-  margin-top: 10px;
-  text-align: right;
-}
 
 .promo {
   display: flex;
