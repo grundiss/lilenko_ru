@@ -109,7 +109,7 @@ export default () => (
                 width="560"
                 height="315"
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                frameborder="0"
+                frameBorder="0"
                 gesture="media"
                 allow="encrypted-media"
                 allowFullScreen
@@ -127,7 +127,7 @@ export default () => (
                 width="560"
                 height="315"
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                frameborder="0"
+                frameBorder="0"
                 gesture="media"
                 allow="encrypted-media"
                 allowFullScreen

@@ -7,10 +7,12 @@ const Html = ({ App, title = "lilenko.ru", bundleName }) => (
     <head>
       <title>{title}</title>
       <meta charSet="utf-8" />
+      <link rel="stylesheet" href="/static/css/common.bundle.css" />
       <link rel="stylesheet" href={`/static/css/${bundleName}.bundle.css`} />
     </head>
     <body>
       <div id="app" dangerouslySetInnerHTML={{ __html: ReactDOMServer.renderToString(<App />) }} />
+      <script src="/static/js/common.bundle.js" />
       <script src={`/static/js/${bundleName}.bundle.js`} />
     </body>
   </html>

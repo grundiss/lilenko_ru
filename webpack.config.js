@@ -1,8 +1,10 @@
 var path = require("path");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var webpack = require("webpack");
 
 module.exports = {
   entry: {
+    common: ["react", "react-dom", "./src/client/layout/page.js"],
     main: "./src/client/pages/main/browser.js",
     book: "./src/client/pages/book/browser.js",
     conference: "./src/client/pages/conference/browser.js",
@@ -27,7 +29,6 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        //include: path.join(__dirname, "src"),
         use: ExtractTextPlugin.extract({
           use: [
             {
@@ -55,7 +56,10 @@ module.exports = {
       },
     ],
   },
-  plugins: [new ExtractTextPlugin({ filename: "../css/[name].bundle.css", allChunks: true })],
+  plugins: [
+    new ExtractTextPlugin({ filename: "../css/[name].bundle.css", allChunks: true }),
+    new webpack.optimize.CommonsChunkPlugin({ name: "common", filename: "common.bundle.js" }),
+  ],
   resolve: {
     modules: [path.join(__dirname, "src"), "node_modules"],
     extensions: [".js", ".jsx"],
