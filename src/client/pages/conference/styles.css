@@ -1,8 +1,9 @@
 @import url('../common.css');
 
 .email {
-  display: inline-block;
-  vertical-align: top;
-  padding: 2px 5px;
+  display: block;
+  padding: 10px;
   background-color: #fff1a4;
+  float: left;
+  margin: 30px 30px 30px 0;
 }
