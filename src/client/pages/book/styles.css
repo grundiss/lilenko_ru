@@ -1,1 +1,16 @@
 @import url('../common.css');
+
+.foreword {
+  width: 400px;
+  float: right;
+  font-family: 'Forum', serif;
+}
+
+.forewordAuthor {
+  text-align: right;
+}
+
+.media {
+  float: left;
+  margin: 30px 30px 30px 0;
+}
