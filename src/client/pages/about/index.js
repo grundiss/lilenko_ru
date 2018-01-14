@@ -10,37 +10,7 @@ export default () => (
       <div className={style.twoCols}>
         <div className={style.twoColsRight}>
           <div className={style.media}>
-            <iframe
-              width="500"
-              height="281"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              frameBorder="0"
-              gesture="media"
-              allow="encrypted-media"
-              allowFullScreen
-            />
-          </div>
-          <div className={style.media}>
-            <iframe
-              width="500"
-              height="281"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              frameBorder="0"
-              gesture="media"
-              allow="encrypted-media"
-              allowFullScreen
-            />
-          </div>
-          <div className={style.media}>
-            <iframe
-              width="500"
-              height="281"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              frameBorder="0"
-              gesture="media"
-              allow="encrypted-media"
-              allowFullScreen
-            />
+            <img src="/assets/about.jpg" />
           </div>
         </div>
         <div className={style.twoColsLeft}>
