@@ -1,6 +1,27 @@
 var path = require("path");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 var webpack = require("webpack");
+
+var plugins = [
+  new ExtractTextPlugin({ filename: "../css/[name].bundle.css", allChunks: true }),
+  new webpack.optimize.CommonsChunkPlugin({ name: "common", filename: "common.bundle.js" }),
+];
+
+if (process.env.NODE_ENV === "production") {
+  plugins.push(
+    new UglifyJsPlugin(),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("production"),
+    })
+  );
+} else {
+  plugins.push(
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("development"),
+    })
+  );
+}
 
 module.exports = {
   entry: {
@@ -56,10 +77,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new ExtractTextPlugin({ filename: "../css/[name].bundle.css", allChunks: true }),
-    new webpack.optimize.CommonsChunkPlugin({ name: "common", filename: "common.bundle.js" }),
-  ],
+  plugins: plugins,
   resolve: {
     modules: [path.join(__dirname, "src"), "node_modules"],
     extensions: [".js", ".jsx"],
