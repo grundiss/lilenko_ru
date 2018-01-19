@@ -60,7 +60,19 @@ export default root => {
       .catch(notOk);
   });
 
-  app.listen(3000, () => {
-    console.log("Server is started on a port 3000");
-  });
+  if (process.env.SOCKET) {
+    app.listen(process.env.SOCKET, () => {
+      fs.chmodSync(process.env.SOCKET, "777");
+      console.log(`App listening on socket ${process.env.SOCKET}!`);
+
+      process.once("SIGINT", () => {
+        console.log("SIGINT, shutting down process");
+        fs.unlinkSync(process.env.SOCKET);
+      });
+    });
+  } else {
+    app.listen(3000, () => {
+      console.log("Server is started on a port 3000");
+    });
+  }
 };
