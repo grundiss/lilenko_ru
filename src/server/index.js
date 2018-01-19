@@ -1,4 +1,5 @@
 import path from "path";
+import fs from "fs";
 import AWS from "aws-sdk";
 import express from "express";
 import bodyParser from "body-parser";
@@ -61,6 +62,10 @@ export default root => {
   });
 
   if (process.env.SOCKET) {
+    try {
+      fs.unlinkSync(process.env.SOCKET);
+    } catch (e) {}
+
     app.listen(process.env.SOCKET, () => {
       fs.chmodSync(process.env.SOCKET, "777");
       console.log(`App listening on socket ${process.env.SOCKET}!`);
