@@ -67,7 +67,6 @@ export default root => {
     } catch (e) {}
 
     app.listen(process.env.SOCKET, () => {
-      fs.chmodSync(process.env.SOCKET, "777");
       console.log(`App listening on socket ${process.env.SOCKET}!`);
 
       process.once("SIGINT", () => {

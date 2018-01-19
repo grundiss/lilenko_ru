@@ -2,10 +2,10 @@ module.exports = {
   apps: [
     {
       name: "lilenko_ru",
-      script: "./index.js",
+      script: "npm",
+      args: "start",
       watch: true,
       env: {
-        SOCKET: "./lilenko_ru.sock",
         NODE_ENV: "production",
       },
     },
