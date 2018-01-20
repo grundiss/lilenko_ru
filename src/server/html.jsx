@@ -53,7 +53,7 @@ const Html = ({ App, title = "lilenko.ru", bundleName, url }) => (
             <div>
               <img
                 src="https://mc.yandex.ru/watch/47376385"
-                style="position:absolute; left:-9999px;"
+                style={{ position: "absolute", left: "-9999px" }}
                 alt=""
               />
             </div>
