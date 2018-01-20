@@ -99,11 +99,11 @@ export default () => (
       <div className={style.feedBackList}>
         <div className={style.feedBackColumn}>
           <div className={style.feedBackItem}>
-            <div className={style.feedBackItemTitle}>
+            <h4 className={style.feedBackItemTitle}>
               Мариэтта Цигаль-Полищук,
               <br />
               Президент благотворительного фонда «Я не один»
-            </div>
+            </h4>
             <div className={style.feedBackItemMedia}>
               <iframe
                 width="560"
@@ -117,11 +117,11 @@ export default () => (
             </div>
           </div>
           <div className={style.feedBackItem}>
-            <div className={style.feedBackItemTitle}>
+            <h4 className={style.feedBackItemTitle}>
               Шаши Мартынова,
               <br />
               автор восьми краудфандинговых проектов. Переводчик, редактор
-            </div>
+            </h4>
             <div className={style.feedBackItemText}>
               <p>
                 С Ирой мы в 2015-м вместе вели небольшой по сумме, но бодрый и живой крауд-проект —
@@ -138,11 +138,11 @@ export default () => (
         </div>
         <div className={style.feedBackColumn}>
           <div className={style.feedBackItem}>
-            <div className={style.feedBackItemTitle}>
+            <h4 className={style.feedBackItemTitle}>
               Яшка Казанова,
               <br />
               поэт, автор книги «Бессердечная мускулатура»
-            </div>
+            </h4>
             <div className={style.feedBackItemMedia}>
               <img src="/assets/kazanova.jpg" />
             </div>

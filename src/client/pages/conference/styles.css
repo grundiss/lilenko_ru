@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+.section2 {
+  margin-top: 30px;
+}
+
 .email {
   display: block;
   padding: 10px;
@@ -22,4 +26,10 @@
   display: block;
   float: right;
   margin: 30px 30px 30px 0;
+}
+
+.feedback {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
 }

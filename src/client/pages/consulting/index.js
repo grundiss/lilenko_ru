@@ -7,7 +7,17 @@ import style from "./styles.css";
 
 export default () => (
   <Page>
-    <Section title="Консалтинг">
+    <div className={style.left}>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Vo_pJnIJyG4"
+        frameBorder="0"
+        allow="encrypted-media"
+        allowFullScreen
+      />
+    </div>
+    <Section title="Консалтинг" className={style.right}>
       <p>Чтобы сделать правильно, надо знать и о правилах, и об ошибках.</p>
       <p>Формат консультаций:</p>
       <ul>

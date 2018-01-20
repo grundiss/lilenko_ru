@@ -100,5 +100,42 @@ export default () => (
         ]}
       />
     </div>
+    <Section
+      title="Отзывы участников конференции 2017 года"
+      className={cx(style.section, style.section2)}
+    >
+      <div className={cx("clearfix", style.feedback)}>
+        <div className={style.item}>
+          <h4>Анна Клепиковская</h4>
+          <div>
+            Владелец отеля" Голубино" в Архангельской области, автор краудфандингового проекта
+          </div>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/z80IIGotZQA"
+              frameBorder="0"
+              allow="encrypted-media"
+              allowFullScreen
+            />
+          </div>
+        </div>
+        <div className={style.item}>
+          <h4>Анна Таджимуратова</h4>
+          <div>Генеральный директор краудфандинговой платформы Казахстана</div>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/QvvNRYkB1q0"
+              frameBorder="0"
+              allow="encrypted-media"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </div>
+    </Section>
   </Page>
 );
