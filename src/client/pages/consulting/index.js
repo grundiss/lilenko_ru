@@ -2,22 +2,13 @@ import React from "react";
 import Page from "client/layout/page";
 import Section from "client/components/section";
 import Subscribe from "client/components/subscribe";
+import cx from "classnames";
 
 import style from "./styles.css";
 
 export default () => (
   <Page>
-    <div className={style.left}>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/Vo_pJnIJyG4"
-        frameBorder="0"
-        allow="encrypted-media"
-        allowFullScreen
-      />
-    </div>
-    <Section title="Консалтинг" className={style.right}>
+    <Section title="Консалтинг" className={style.section}>
       <p>Чтобы сделать правильно, надо знать и о правилах, и об ошибках.</p>
       <p>Формат консультаций:</p>
       <ul>
@@ -40,6 +31,38 @@ export default () => (
         />
       </div>
       <p>Стоимость индивидуального консультирования 2000 рублей за один час</p>
+    </Section>
+    <Section title="Отзывы">
+      <div className={style.feedback}>
+        <div className={style.feedbackItem}>
+          <h4>Экологическая общественная организация "Большая Байкальская тропа"</h4>
+          <div>Автор краудфандингового проекта</div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Vo_pJnIJyG4"
+            frameBorder="0"
+            allow="encrypted-media"
+            allowFullScreen
+          />
+        </div>
+        <div className={style.feedbackItem}>
+          <h4>Шаши Мартынова</h4>
+          <div>Автор восьми краудфандинговых проектов. Переводчик, редактор.</div>
+          <p>
+            С Ирой мы в 2015-м вместе вели небольшой по сумме, но бодрый и живой крауд-проект —
+            подписку на издание маленького романа Спайка Миллигэна "Пакун". К тому времени мы обе
+            уже успели съесть собаку-другую на краудфандинге, Ира взяла на себя часть сетевого
+            продвижения проекта и кое-какие организационные задачи.
+          </p>
+          <p>
+            Легко и приятно иметь дело с человеком и сходного темперамента, и похожих идейных
+            кренов, и уверенно компетентным и увлеченным. Всё получилось, проект состоялся, сумму мы
+            перебрали еще до заявленной даты финиша, до сих пор с удовольствием вспоминаем, с каким
+            аллюром и многими смехами получилось то приключение.
+          </p>
+        </div>
+      </div>
     </Section>
   </Page>
 );
