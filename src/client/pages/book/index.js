@@ -1,6 +1,7 @@
 import React from "react";
 import Page from "client/layout/page";
 import Section from "client/components/section";
+import TheGallery from "client/components/gallery";
 
 import style from "./styles.css";
 
@@ -26,6 +27,14 @@ export default () => (
         К.Поппер.
       </p>
     </Section>
+    <TheGallery
+      photos={[
+        { src: "/assets/book1.jpg", width: 960, height: 960 },
+        { src: "/assets/book2.jpg", width: 960, height: 960 },
+        { src: "/assets/book3.jpg", width: 960, height: 960 },
+      ]}
+      className={style.gallery}
+    />
     <Section title="Глава 2. Подготовка кампании краудфандинга">
       <div className="clearfix">
         <div className={style.foreword}>
