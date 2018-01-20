@@ -44,6 +44,7 @@ export default class Subscribe extends React.Component {
   render() {
     const {
       invitationText,
+      submitText = "Подписться",
       successText = (
         <React.Fragment>
           <Icon name="check" /> Спасибо за подписку!
@@ -63,7 +64,7 @@ export default class Subscribe extends React.Component {
             <nobr>
               <input type="text" value={this.state.value} onChange={this.setValue} />
               <button onClick={this.send} disabled={this.state.state === "sending"}>
-                Подписаться
+                {submitText}
               </button>
             </nobr>
           </React.Fragment>

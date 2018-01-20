@@ -79,7 +79,7 @@ export default ({ children }) => (
   <div>
     <nav className={navStyle.bar}>
       <a href="/" className={cx(navStyle.link, navStyle.linkHome)}>
-        <Icon name="home" />
+        <Icon name="home" /> Главная
       </a>
       <Menu className={navStyle.link} />
     </nav>
