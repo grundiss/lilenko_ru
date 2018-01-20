@@ -76,7 +76,7 @@ class ShareBlock extends React.Component {
 }
 
 export default ({ children }) => (
-  <div>
+  <div className={navStyle.root}>
     <nav className={navStyle.bar}>
       <a href="/" className={cx(navStyle.link, navStyle.linkHome)}>
         <Icon name="home" /> Главная

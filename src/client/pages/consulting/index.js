@@ -2,6 +2,7 @@ import React from "react";
 import Page from "client/layout/page";
 import Section from "client/components/section";
 import Subscribe from "client/components/subscribe";
+import Youtube from "client/components/youtube";
 import cx from "classnames";
 
 import style from "./styles.css";
@@ -46,14 +47,7 @@ export default () => (
         <div className={style.feedbackItem}>
           <h4>Экологическая общественная организация "Большая Байкальская тропа"</h4>
           <div>Автор краудфандингового проекта</div>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/Vo_pJnIJyG4"
-            frameBorder="0"
-            allow="encrypted-media"
-            allowFullScreen
-          />
+          <Youtube id="Vo_pJnIJyG4" />
         </div>
         <div className={style.feedbackItem}>
           <h4>Шаши Мартынова</h4>

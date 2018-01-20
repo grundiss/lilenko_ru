@@ -6,6 +6,12 @@
   font-family: 'Forum', serif;
 }
 
+@media (max-width: 400px) {
+  .foreword {
+    width: 70%;
+  }
+}
+
 .forewordAuthor {
   text-align: right;
 }

@@ -16,6 +16,7 @@ const Html = ({ App, title = "lilenko.ru", bundleName, url }) => (
       <meta property="og:image:height" content="340" />
       <meta property="og:type" content="profile" />
       <meta property="og:url" content={`http://lilenko.ru${url}`} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
       {process.env.NODE_ENV === "production" && (

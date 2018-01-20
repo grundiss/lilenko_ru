@@ -2,6 +2,7 @@ import React from "react";
 import Page from "client/layout/page";
 import Icon from "client/components/icon";
 import Section from "client/components/section";
+import Youtube from "client/components/youtube";
 import cx from "classnames";
 
 import style from "./styles.css";
@@ -73,8 +74,11 @@ export default () => (
 
     <Section className={style.whatToDo} title="Что можно сделать с помощью краудфандинга">
       <div className={style.whatToList}>
-        {Object.entries(whatToDo).map(([icon, caption], i) => (
-          <div className={style.whatToItem} key={i}>
+        {Object.entries(whatToDo).map(([icon, caption], i, { length }) => (
+          <div
+            className={cx(style.whatToItem, { [style.whatToItemDropOnMobile]: i === length - 1 })}
+            key={i}
+          >
             <Icon name={icon} size="2x" className={style.whatToItemIcon} />
             {caption}
           </div>
@@ -104,17 +108,7 @@ export default () => (
               <br />
               Президент благотворительного фонда «Я не один»
             </h4>
-            <div className={style.feedBackItemMedia}>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                frameBorder="0"
-                gesture="media"
-                allow="encrypted-media"
-                allowFullScreen
-              />
-            </div>
+            <Youtube id="dQw4w9WgXcQ" className={style.feedBackItemMedia} />
           </div>
           <div className={style.feedBackItem}>
             <h4 className={style.feedBackItemTitle}>

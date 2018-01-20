@@ -2,6 +2,7 @@ import React from "react";
 import Page from "client/layout/page";
 import Section from "client/components/section";
 import Subscribe from "client/components/subscribe";
+import Youtube from "client/components/youtube";
 import TheGallery from "client/components/gallery";
 import cx from "classnames";
 
@@ -105,35 +106,17 @@ export default () => (
       className={cx(style.section, style.section2)}
     >
       <div className={cx("clearfix", style.feedback)}>
-        <div className={style.item}>
+        <div className={style.feedbackItem}>
           <h4>Анна Клепиковская</h4>
           <div>
             Владелец отеля" Голубино" в Архангельской области, автор краудфандингового проекта
           </div>
-          <div>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/z80IIGotZQA"
-              frameBorder="0"
-              allow="encrypted-media"
-              allowFullScreen
-            />
-          </div>
+          <Youtube id="z80IIGotZQA" />
         </div>
-        <div className={style.item}>
+        <div className={style.feedbackItem}>
           <h4>Анна Таджимуратова</h4>
           <div>Генеральный директор краудфандинговой платформы Казахстана</div>
-          <div>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/QvvNRYkB1q0"
-              frameBorder="0"
-              allow="encrypted-media"
-              allowFullScreen
-            />
-          </div>
+          <Youtube id="QvvNRYkB1q0" />
         </div>
       </div>
     </Section>

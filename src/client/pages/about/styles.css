@@ -9,8 +9,20 @@
   width: 500px;
 }
 
+@media (max-width: 400px) {
+  .twoColsRight {
+    display: none;
+  }
+}
+
 .twoColsLeft {
   margin-right: 520px;
+}
+
+@media (max-width: 400px) {
+  .twoColsLeft {
+    margin-right: 0;
+  }
 }
 
 .media {

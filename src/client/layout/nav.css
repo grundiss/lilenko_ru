@@ -20,3 +20,11 @@
   margin-right: 15px;
   text-decoration: none;
 }
+
+.root {}
+
+@media (max-width: 400px) {
+  .root {
+    margin: 0 10px;
+  }
+}

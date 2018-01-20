@@ -60,9 +60,23 @@
   overflow: hidden;
 }
 
+@media (max-width: 400px) {
+  .banner {
+    height: auto;
+  }
+}
+
 .bannerImg {
   float: right;
   animation: banner-img 1.5s linear 0s 1;
+  width: 382px;
+  height: auto;
+}
+
+@media (max-width: 400px) {
+  .bannerImg {
+    width: 300px;
+  }
 }
 
 .bannerText {
@@ -71,6 +85,13 @@
   font-weight: 700;
   margin-top: 180px;
   animation: banner-text 2s linear 0s 1;
+  position: absolute;
+}
+
+@media (max-width: 400px) {
+  .bannerText {
+    margin-right: 0;
+  }
 }
 
 .bannerTextTop {
@@ -80,7 +101,20 @@
   letter-spacing: 10px;
 }
 
+@media (max-width: 400px) {
+  .bannerTextTop {
+    font-size: 25px;
+    letter-spacing: normal;
+  }
+}
+
 .bannerTextBottom {}
+
+@media (max-width: 400px) {
+  .bannerTextBottom {
+    color: #ff4629;
+  }
+}
 
 .bannerTextBottomItem {
   font-size: 24px;
@@ -97,11 +131,31 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 10px;
+  flex-flow: row nowrap;
+}
+
+@media (max-width: 400px) {
+  .whatToList {
+    flex-flow: row wrap;
+  }
 }
 
 .whatToItem {
   padding: 0 10px 0 20px;
   text-align: center;
+}
+
+@media (max-width: 400px) {
+  .whatToItem {
+    min-width: 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .whatToItemDropOnMobile {
+    display: none;
+  }
 }
 
 .whatToItemIcon {
@@ -125,8 +179,21 @@
   justify-content: space-around;
 }
 
+@media (max-width: 400px) {
+  .feedBackList {
+    flex-direction: column;
+  }
+}
+
 .feedBackColumn {
-  width: 560px;
+  max-width: 560px;
+  width: 49%;
+}
+
+@media (max-width: 400px) {
+  .feedBackColumn {
+    width: 100%;
+  }
 }
 
 .feedBackItem {
@@ -150,6 +217,18 @@
   justify-content: space-around;
 }
 
+@media (max-width: 400px) {
+  .promo {
+    flex-direction: column;
+  }
+}
+
 .promoColumn {
   width: 560px;
+}
+
+@media (max-width: 400px) {
+  .promoColumn {
+    width: auto;
+  }
 }

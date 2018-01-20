@@ -33,3 +33,14 @@
   justify-content: space-around;
   align-content: flex-start;
 }
+
+@media (max-width: 400px) {
+  .feedback {
+    flex-direction: column;
+  }
+}
+
+.feedbackItem {
+  min-width: 49%;
+  max-width: 49%;
+}

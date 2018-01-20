@@ -1,6 +1,7 @@
 import React from "react";
 import Page from "client/layout/page";
 import Section from "client/components/section";
+import Youtube from "client/components/youtube";
 import SubscribeOriginal from "client/components/subscribe";
 
 import style from "./styles.css";
@@ -20,18 +21,8 @@ const Subscribe = props => (
 export default () => (
   <Page>
     <Section title="Школа">
-      <p className={style.intro}>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          frameBorder="0"
-          gesture="media"
-          allow="encrypted-media"
-          allowFullScreen
-        />
-      </p>
-      <div>
+      <Youtube className={style.intro} id="dQw4w9WgXcQ" />
+      <div className={style.optionsTableWrapper}>
         <table className={style.optionsTable}>
           <thead>
             <tr>
