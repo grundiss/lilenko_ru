@@ -2,13 +2,18 @@ import React from "react";
 import ReactDOMServer from "react-dom/server";
 import { PassThrough } from "stream";
 
-const Html = ({ App, title = "lilenko.ru", bundleName }) => (
+const Html = ({ App, title = "lilenko.ru", bundleName, url }) => (
   <html>
     <head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <link rel="stylesheet" href="/static/css/common.bundle.css" />
       <link rel="stylesheet" href={`/static/css/${bundleName}.bundle.css`} />
+      <meta property="og:title" content="Ирина Лиленко" />
+      <meta property="og:description" content="Эксперт в сфере краудтехнологий" />
+      <meta property="og:image" content="http://lienko.ru/assets/lilenko.png" />
+      <meta property="og:type" content="profile" />
+      <meta property="og:url" content={`http://lilenko.ru${url}`} />
     </head>
     <body>
       {process.env.NODE_ENV === "production" && (
@@ -64,12 +69,14 @@ const Html = ({ App, title = "lilenko.ru", bundleName }) => (
   </html>
 );
 
-export default (App, bundleName) => {
+export default (App, bundleName, url) => {
   const resp = new PassThrough();
 
   resp.push("<!DOCTYPE html>", "utf8");
 
-  ReactDOMServer.renderToStaticNodeStream(<Html bundleName={bundleName} App={App} />).pipe(resp);
+  ReactDOMServer.renderToStaticNodeStream(
+    <Html bundleName={bundleName} App={App} url={url} />
+  ).pipe(resp);
 
   return resp;
 };

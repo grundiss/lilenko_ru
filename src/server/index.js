@@ -21,31 +21,31 @@ export default root => {
   }
 
   app.get("/", (req, res) => {
-    html(Main, "main").pipe(res);
+    html(Main, "main", req.url).pipe(res);
   });
 
   app.get("/book", (req, res) => {
-    html(Book, "book").pipe(res);
+    html(Book, "book", req.url).pipe(res);
   });
 
   app.get("/conference", (req, res) => {
-    html(Conference, "conference").pipe(res);
+    html(Conference, "conference", req.url).pipe(res);
   });
 
   app.get("/school", (req, res) => {
-    html(School, "school").pipe(res);
+    html(School, "school", req.url).pipe(res);
   });
 
   app.get("/consulting", (req, res) => {
-    html(Consulting, "consulting").pipe(res);
+    html(Consulting, "consulting", req.url).pipe(res);
   });
 
   app.get("/articles", (req, res) => {
-    html(Articles, "articles").pipe(res);
+    html(Articles, "articles", req.url).pipe(res);
   });
 
   app.get("/about", (req, res) => {
-    html(About, "about").pipe(res);
+    html(About, "about", req.url).pipe(res);
   });
 
   app.post("/json/subsribe-to-updates", (req, res) => {
