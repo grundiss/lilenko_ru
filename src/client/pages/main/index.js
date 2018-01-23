@@ -108,7 +108,7 @@ export default () => (
               <br />
               Президент благотворительного фонда «Я не один»
             </h4>
-            <Youtube id="dQw4w9WgXcQ" className={style.feedBackItemMedia} />
+            <Youtube id="8rOs6-OTYkY" className={style.feedBackItemMedia} />
           </div>
           <div className={style.feedBackItem}>
             <h4 className={style.feedBackItemTitle}>
