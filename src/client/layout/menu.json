@@ -1,7 +1,6 @@
 [
   { "title": "Конференция", "link": "/conference/" },
   { "title": "Книга", "link": "/book/" },
-  { "title": "Школа краудфандинга", "link": "/school/" },
   { "title": "Консалтинг", "link": "/consulting/" },
   { "title": "Статьи", "link": "/articles/" },
   { "title": "Обо мне", "link": "/about" }

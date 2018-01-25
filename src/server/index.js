@@ -32,9 +32,9 @@ export default root => {
     html(Conference, "conference", req.url).pipe(res);
   });
 
-  app.get("/school", (req, res) => {
-    html(School, "school", req.url).pipe(res);
-  });
+  // app.get("/school", (req, res) => {
+  //   html(School, "school", req.url).pipe(res);
+  // });
 
   app.get("/consulting", (req, res) => {
     html(Consulting, "consulting", req.url).pipe(res);
