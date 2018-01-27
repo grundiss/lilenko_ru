@@ -6,7 +6,7 @@
   font-family: 'Forum', serif;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .foreword {
     width: 70%;
   }

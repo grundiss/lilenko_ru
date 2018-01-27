@@ -60,7 +60,7 @@
   overflow: hidden;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .banner {
     height: auto;
   }
@@ -73,7 +73,7 @@
   height: auto;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .bannerImg {
     width: 300px;
   }
@@ -88,7 +88,7 @@
   position: absolute;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .bannerText {
     margin-right: 0;
   }
@@ -101,7 +101,7 @@
   letter-spacing: 10px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .bannerTextTop {
     font-size: 25px;
     letter-spacing: normal;
@@ -110,7 +110,7 @@
 
 .bannerTextBottom {}
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .bannerTextBottom {
     color: #ff4629;
   }
@@ -134,7 +134,7 @@
   flex-flow: row nowrap;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .whatToList {
     flex-flow: row wrap;
   }
@@ -145,7 +145,7 @@
   text-align: center;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .whatToItem {
     min-width: 50%;
     max-width: 50%;
@@ -179,7 +179,7 @@
   justify-content: space-around;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .feedBackList {
     flex-direction: column;
   }
@@ -190,7 +190,7 @@
   width: 49%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .feedBackColumn {
     width: 100%;
   }
@@ -217,7 +217,7 @@
   justify-content: space-around;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .promo {
     flex-direction: column;
   }
@@ -227,7 +227,7 @@
   width: 560px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .promoColumn {
     width: auto;
   }

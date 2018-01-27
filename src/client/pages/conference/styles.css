@@ -34,7 +34,7 @@
   align-content: flex-start;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .feedback {
     flex-direction: column;
   }

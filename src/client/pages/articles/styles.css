@@ -12,7 +12,7 @@
   margin-right: auto;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .q {
     width: auto;
   }
@@ -27,7 +27,7 @@
   margin: 30px 0 30px 30px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .pic {
     float: none;
     margin-right: -10px;

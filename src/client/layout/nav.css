@@ -23,7 +23,7 @@
 
 .root {}
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .root {
     margin: 0 10px;
   }

@@ -9,7 +9,7 @@
   width: 500px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .twoColsRight {
     display: none;
   }
@@ -19,7 +19,7 @@
   margin-right: 520px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .twoColsLeft {
     margin-right: 0;
   }

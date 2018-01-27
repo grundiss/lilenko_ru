@@ -10,7 +10,7 @@
   align-content: flex-start;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .feedback {
     flex-direction: column;
   }
@@ -21,7 +21,7 @@
   min-width: 40%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .feedbackItem {
     padding-left: 0;
     padding-right: 0;

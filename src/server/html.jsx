@@ -11,7 +11,7 @@ const Html = ({ App, title = "lilenko.ru", bundleName, url }) => (
       <link rel="stylesheet" href={`/static/css/${bundleName}.bundle.css`} />
       <meta property="og:title" content="Ирина Лиленко" />
       <meta property="og:description" content="Эксперт в сфере краудтехнологий" />
-      <meta property="og:image" content="http://lienko.ru/assets/lilenko.png" />
+      <meta property="og:image" content="http://lilenko.ru/assets/lilenko.png" />
       <meta property="og:image:width" content="243" />
       <meta property="og:image:height" content="340" />
       <meta property="og:type" content="profile" />
